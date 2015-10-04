@@ -1,0 +1,30 @@
+---
+title: "graduation_script"
+author: "nick d"
+date: "10/4/2015"
+output: html_document
+---
+
+
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r}
+library("dplyr")
+```
+
+Read in the data and subset it.
+
+```{r, read-and-subset-data}
+gap.in = read.table("output/combined_gapMinder.tsv",sep = "\t",header = TRUE)
+
+
+p1 = subset(gap.in,gap.in$country == "Chad")
+p2 = subset(gap.in,gap.in$country == "France")
+p3 = subset(gap.in,gap.in$country == "Finland")
+
+```
+
+Now plot the data.
+
+```{r}
