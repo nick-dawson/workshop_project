@@ -55,3 +55,8 @@ plot(x = p3[,2],
     col = "red")
 
 ```
+
+
+```{r,aggregate data}
+aggregate(gap.in$lifeExp,list(lifeExp = gap.in$lifeExp),mean)
+```
