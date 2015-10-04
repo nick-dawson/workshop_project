@@ -55,8 +55,10 @@ plot(x = p3[,2],
     col = "red")
 
 ```
-
+The mean, max, and min life expectancy by continent.
 
 ```{r,aggregate data}
-aggregate(gap.in$lifeExp,list(lifeExp = gap.in$lifeExp),mean)
+aggregate(gap.in$lifeExp,list(continent = gap.in$continent),mean)  
+aggregate(gap.in$lifeExp,list(continent = gap.in$continent),max)
+aggregate(gap.in$lifeExp,list(continent = gap.in$continent),min)
 ```
