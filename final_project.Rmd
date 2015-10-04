@@ -7,9 +7,7 @@ output: html_document
 
 
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
-
-```{r}
+```{r,echo=FALSE}
 library("dplyr")
 ```
 
@@ -27,4 +25,33 @@ p3 = subset(gap.in,gap.in$country == "Finland")
 
 Now plot the data.
 
-```{r}
+```{r, plot-data}
+plot(x = p1[,2],
+     y = p1[,6],
+     main = paste("Year vs GDP per capita for",p1[2,1]),
+    ylab = "Year",
+    xlab = "GDP (USD)",
+    pch = 20,
+    cex = 2,
+    col = "red")
+
+
+plot(x = p2[,2],
+     y = p2[,6],
+     main = paste("Year vs GDP per capita for",p2[2,1]),
+    ylab = "Year",
+    xlab = "GDP (USD)",
+    pch = 20,
+    cex = 2,
+    col = "red")
+
+plot(x = p3[,2],
+     y = p3[,6],
+     main = paste("Year vs GDP per capita for",p3[2,1]),
+    ylab = "Year",
+    xlab = "GDP (USD)",
+    pch = 20,
+    cex = 2,
+    col = "red")
+
+```
